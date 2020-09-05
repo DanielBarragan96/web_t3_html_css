@@ -4,13 +4,34 @@
     <meta charset="utf-8" />
     <title>Ejercicio 1</title>
     <style>
-      td.title {
+      input[type="radio"] {
+        margin: auto;
+        display: none;
+      }
+      input[type="radio"]:nth-of-type(1):checked ~ table:nth-of-type(2),
+      input[type="radio"]:nth-of-type(1):checked ~ table:nth-of-type(3) {
+        display: none;
+        margin: auto;
+      }
+      input[type="radio"]:nth-of-type(2):checked ~ table:nth-of-type(1),
+      input[type="radio"]:nth-of-type(2):checked ~ table:nth-of-type(3) {
+        display: none;
+        margin: auto;
+      }
+      input[type="radio"]:nth-of-type(3):checked ~ table:nth-of-type(1),
+      input[type="radio"]:nth-of-type(3):checked ~ table:nth-of-type(2) {
+        display: none;
+        margin: auto;
+      }
+      .title {
         color: white;
         background-color: lightblue;
         font-size: 3em;
         text-shadow: 0px 0px 10px black;
+        display: block;
+        width: 100%;
       }
-      td.subtitle {
+      .subtitle {
         color: white;
         background-color: rgb(232, 129, 126);
         font-size: 2em;
@@ -24,6 +45,11 @@
   </head>
   <body>
     <div class="tables">
+      <input type="radio" name="tab" id="id_html" checked />
+      <input type="radio" name="tab" id="id_css" />
+      <input type="radio" name="tab" id="id_bootstrap" />
+
+      <label for="id_html" class="title">HTML:</label>
       <table
         border="0"
         width="100%"
@@ -31,9 +57,6 @@
         cellspacing="0"
         cellpadding="0"
       >
-        <tr>
-          <td class="title">HTML</td>
-        </tr>
         <tr>
           <td class="subtitle">Texto</td>
         </tr>
@@ -50,6 +73,7 @@
           <td class="subtitle">Enlaces</td>
         </tr>
       </table>
+      <label for="id_css" class="title">CSS:</label>
       <table
         border="0"
         width="100%"
@@ -57,9 +81,6 @@
         cellspacing="0"
         cellpadding="0"
       >
-        <tr>
-          <td class="title">CSS</td>
-        </tr>
         <tr>
           <td class="subtitle">Selectores</td>
         </tr>
@@ -70,6 +91,7 @@
           <td class="subtitle">Layout</td>
         </tr>
       </table>
+      <label for="id_bootstrap" class="title">Bootstrap:</label>
       <table
         border="0"
         width="100%"
@@ -77,9 +99,6 @@
         cellspacing="0"
         cellpadding="0"
       >
-        <tr>
-          <td class="title">Bootstrap</td>
-        </tr>
         <tr>
           <td class="subtitle">Componentes</td>
         </tr>
