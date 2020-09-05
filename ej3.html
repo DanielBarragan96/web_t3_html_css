@@ -26,7 +26,7 @@
         width: 100%;
         border-collapse: collapse;
       }
-      th {
+      table tr:first-of-type {
         background-color: darkslategrey;
         font-size: 2em;
         color: seashell;
@@ -69,6 +69,15 @@
         tr[data-info*="A"]
         td {
         color: white;
+      }
+      input[id="ch1"]:checked ~ table tr td:nth-of-type(n + 2),
+      input[id="ch1"]:checked ~ table tr th:nth-of-type(n + 2) {
+        display: none;
+        margin: auto;
+      }
+      input[id="ch1"]:checked ~ table tr td:last-of-type,
+      input[id="ch1"]:checked ~ table tr th:last-of-type {
+        display: initial;
       }
     </style>
 
