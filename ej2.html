@@ -1,58 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html
+  lang="en"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>carousel de enlaces</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
     <style>
-       
-        /* aquí pon su solución, no se debe ver exactamente igual al video, puedes usar otros colores*/
-
+      /* aquí pon su solución, no se debe ver exactamente igual al video, puedes usar otros colores*/
+      div {
+        padding-right: 5%;
+        padding-left: 5%;
+      }
+      iframe {
+        width: 100%;
+        height: 600px;
+      }
+      input#ch1:checked ~ div:nth-of-type(1) > span:nth-of-type(1) > label > i,
+      input#ch1:checked ~ div:nth-of-type(3) > span:nth-of-type(1) > label > i {
+        display: none;
+        margin: auto;
+      }
+      iframe {
+        display: none;
+        margin: auto;
+      }
+      input#i1:checked + div > iframe {
+        display: initial;
+      }
+      input#i2:checked + div > iframe {
+        display: initial;
+      }
+      input#i3:checked + div > iframe {
+        display: initial;
+      }
+      input#i1:checked ~ div:nth-of-type(2) > span > label > i,
+      input#i1:checked ~ div:nth-of-type(3) > span > label > i {
+        display: none;
+        margin: auto;
+      }
+      input#i2:checked ~ div:nth-of-type(1) > span > label > i,
+      input#i2:checked ~ div:nth-of-type(3) > span > label > i {
+        display: none;
+        margin: auto;
+      }
+      input#i3:checked ~ div:nth-of-type(1) > span > label > i,
+      input#i3:checked ~ div:nth-of-type(2) > span > label > i {
+        display: none;
+        margin: auto;
+      }
+      input[type="radio"] {
+        visibility: hidden;
+      }
+      .fa-arrow-circle-left {
+        position: fixed;
+        top: 320px;
+        left: 2%;
+      }
+      .fa-arrow-circle-right {
+        position: fixed;
+        top: 320px;
+        left: 96%;
+      }
     </style>
 
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">GUTIERREZ PRECIADO, LUIS FERNANDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
-<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
-<mso:Order msdt:dt="string">913900.000000000</mso:Order>
-<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">GUTIERREZ PRECIADO, LUIS FERNANDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
-<mso:ContentTypeId msdt:dt="string">0x0101009AF89F552A2F4149A5B5EC1687935FB5</mso:ContentTypeId>
-<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
-<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-</head>
-<body>
-
-    <input type="checkbox" name="" id="ch1">
+    <!--[if gte mso 9
+      ]><xml>
+        <mso:CustomDocumentProperties>
+          <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+            msdt:dt="string"
+            >GUTIERREZ PRECIADO, LUIS
+            FERNANDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor
+          >
+          <mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+          <mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+          <mso:Order msdt:dt="string">913900.000000000</mso:Order>
+          <mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+          <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+            msdt:dt="string"
+            >GUTIERREZ PRECIADO, LUIS
+            FERNANDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author
+          >
+          <mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+          <mso:ContentTypeId msdt:dt="string"
+            >0x0101009AF89F552A2F4149A5B5EC1687935FB5</mso:ContentTypeId
+          >
+          <mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+          <mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+        </mso:CustomDocumentProperties> </xml
+    ><![endif]-->
+  </head>
+  <body>
+    <input type="checkbox" name="" id="ch1" />
     <label for="ch1"> Modo circular </label>
-    
-    <input type="radio" name="rd" id="i1" checked>
-    <div class="page">
-         <iframe src="https://iteso.mx" ></iframe>
-         <span ><label for="i3"><i class="fas fa-arrow-circle-left   "></i></label></span>
-         <span ><label for="i2"><i class="fas fa-arrow-circle-right     "></i></label></span>
-    </div>
-    <input type="radio" name="rd" id="i2" >
-    <div class="page">
-         <iframe src="https://d3js.org"></iframe>
-         <span ><label for="i1"><i class="fas fa-arrow-circle-left   "></i> </label></span>
-         <span ><label for="i3"><i class="fas fa-arrow-circle-right     "></i> </label></span>
-    </div>
-    <input type="radio" name="rd" id="i3" >
-    <div class="page">
-         <iframe src="https://serviciosescolares.iteso.mx/documents/11769/0/Calendario+2019/b3f3b892-16fc-4c45-b1bc-ec26a8dfdd6e" ></iframe>
-         <span ><label for="i2"><i class="fas fa-arrow-circle-left   "></i></label></span>
-         <span ><label for="i1"><i class="fas fa-arrow-circle-right     "></i> </label></span>
-    </div>
 
-    
-   
-    
-</body>
+    <input type="radio" name="rd" id="i1" checked />
+    <div class="page">
+      <iframe src="https://iteso.mx"></iframe>
+      <span
+        ><label for="i3"><i class="fas fa-arrow-circle-left"></i></label
+      ></span>
+      <span
+        ><label for="i2"><i class="fas fa-arrow-circle-right"></i></label
+      ></span>
+    </div>
+    <input type="radio" name="rd" id="i2" />
+    <div class="page">
+      <iframe src="https://d3js.org"></iframe>
+      <span
+        ><label for="i1"><i class="fas fa-arrow-circle-left"></i> </label
+      ></span>
+      <span
+        ><label for="i3"><i class="fas fa-arrow-circle-right"></i> </label
+      ></span>
+    </div>
+    <input type="radio" name="rd" id="i3" />
+    <div class="page">
+      <iframe
+        src="https://serviciosescolares.iteso.mx/documents/11769/0/Calendario+2019/b3f3b892-16fc-4c45-b1bc-ec26a8dfdd6e"
+      ></iframe>
+      <span
+        ><label for="i2"><i class="fas fa-arrow-circle-left"></i></label
+      ></span>
+      <span
+        ><label for="i1"><i class="fas fa-arrow-circle-right"></i> </label
+      ></span>
+    </div>
+  </body>
 </html>
