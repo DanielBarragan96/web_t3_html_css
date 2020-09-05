@@ -26,7 +26,7 @@
         height: 600px;
       }
       input#ch1:checked ~ div:nth-of-type(1) > span:nth-of-type(1) > label > i,
-      input#ch1:checked ~ div:nth-of-type(3) > span:nth-of-type(1) > label > i {
+      input#ch1:checked ~ div:nth-of-type(3) > span:nth-of-type(2) > label > i {
         display: none;
         margin: auto;
       }
@@ -43,19 +43,20 @@
       input#i3:checked + div > iframe {
         display: initial;
       }
-      input#i1:checked ~ div:nth-of-type(2) > span > label > i,
-      input#i1:checked ~ div:nth-of-type(3) > span > label > i {
+      .fas {
         display: none;
         margin: auto;
       }
-      input#i2:checked ~ div:nth-of-type(1) > span > label > i,
-      input#i2:checked ~ div:nth-of-type(3) > span > label > i {
-        display: none;
+      input#i1:checked + div > span > label > i {
+        display: initial;
         margin: auto;
       }
-      input#i3:checked ~ div:nth-of-type(1) > span > label > i,
-      input#i3:checked ~ div:nth-of-type(2) > span > label > i {
-        display: none;
+      input#i2:checked + div > span > label > i {
+        display: initial;
+        margin: auto;
+      }
+      input#i3:checked + div > span > label > i {
+        display: initial;
         margin: auto;
       }
       input[type="radio"] {
