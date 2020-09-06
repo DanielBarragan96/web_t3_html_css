@@ -18,12 +18,12 @@
     <style>
       /* aquí pon su solución, no se debe ver exactamente igual al video, puedes usar otros colores*/
       iframe {
-        width: 100%;
+        width: 98%;
         height: 600px;
         position: fixed;
         top: 30px;
-        left: 0%;
-        right: 0%;
+        left: 1%;
+        right: 1%;
       }
       input#ch1:checked ~ div:nth-of-type(1) > span:nth-of-type(1) > label > i,
       input#ch1:checked ~ div:nth-of-type(3) > span:nth-of-type(2) > label > i {
@@ -47,11 +47,37 @@
         display: initial;
         margin: auto;
       }
+      input#i1:checked + div > span > label > i.fa-arrow-circle-left {
+        display: none;
+        margin: auto;
+      }
+      input#ch1:checked
+        ~ input#i1:checked
+        + div
+        > span
+        > label
+        > i.fa-arrow-circle-left {
+        display: initial;
+        margin: auto;
+      }
       input#i2:checked + div > span > label > i {
         display: initial;
         margin: auto;
       }
       input#i3:checked + div > span > label > i {
+        display: initial;
+        margin: auto;
+      }
+      input#i3:checked + div > span > label > i.fa-arrow-circle-right {
+        display: none;
+        margin: auto;
+      }
+      input#ch1:checked
+        ~ input#i3:checked
+        + div
+        > span
+        > label
+        > i.fa-arrow-circle-right {
         display: initial;
         margin: auto;
       }
