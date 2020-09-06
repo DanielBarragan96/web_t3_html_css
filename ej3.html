@@ -70,6 +70,12 @@
         td {
         color: white;
       }
+      input[id="r1"]:checked ~ input[id="r3"]:checked + label::after,
+      input[id="r1"]:checked ~ input[id="r2"]:checked + label::after,
+      input[id="r4"]:checked ~ input[id="r5"]:checked + label::after,
+      input[id="r4"]:checked ~ input[id="r6"]:checked + label::after {
+        content: "\2B50";
+      }
       input[id="ch1"]:checked ~ table tr td:nth-of-type(n + 2),
       input[id="ch1"]:checked ~ table tr th:nth-of-type(n + 2) {
         display: none;
